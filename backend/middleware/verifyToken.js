@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const secretKey = "your_secret_key"; // Use the same secret key from login
 
+
 // Middleware to verify token
 const verifyToken = (req, res, next) => {
   const token = req.cookies.auth_token;
