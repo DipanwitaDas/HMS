@@ -1,7 +1,8 @@
 const express = require('express');
 const db = require('./db');
 const patientRoute = require("./routes/patientRoute")
-const cors = require("cors")
+const cors = require("cors");
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const appointmentRoutes = require('./routes/appointmentRoute');
 const adminRoute = require("./routes/adminRoute")
@@ -15,6 +16,7 @@ const adminAppointmentRoute = require("./routes/adminAppointmentRoute")
 const app = express();
 const PORT = 3000;
 
+app.use(cookieParser());
 app.use(bodyParser.json()); // Middleware to parse JSON in request body
 app.use(express.json());
 app.use(cors({

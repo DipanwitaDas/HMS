@@ -35,7 +35,6 @@ router.get("/appointments", (req, res) => {
             return res.status(500).json({ message: "Database error", error: err });
         }
         res.json(results);
-        console.log(results);
     });
 });
 

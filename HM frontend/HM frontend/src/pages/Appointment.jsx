@@ -27,7 +27,7 @@ const AppointmentPage = ({ patientId }) => {
         }
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         setAppointments(data || []);
       } catch (err) {
         setError("Error fetching appointments.");
